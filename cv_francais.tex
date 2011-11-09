@@ -1,0 +1,127 @@
+\documentclass{article}
+
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{charter}
+%\usepackage{lmodern}
+%\usepackage{utopia}
+%\usepackage{kpfonts}
+%\usepackage{yfonts}
+%\usepackage{venturis2}
+%\usepackage{frcursive}
+%\usepackage[defaultsans]{comfortaa}
+%\usepackage{arev}
+\usepackage[scaled]{berasans}
+\renewcommand*\familydefault{\sfdefault}  %% Only if the base font of the document is to be sans serif
+%\renewcommand*\oldstylenums[1]{{\fontfamily{fxlj}\selectfont #1}}
+\usepackage{geometry}
+\usepackage[NoDate,LabelsAligned]{currvita}
+\setlength{\cvlabelskip}{%
+  5pt%
+}%
+\setlength{\cvlabelsep}{0.5em}
+\geometry{%
+	a4paper,
+	body={180mm,275mm},
+	%left=30mm,top=40mm,
+	left=15mm,top=10mm,	
+	headheight=0mm,headsep=0mm,
+	marginparsep=4mm,
+	marginparwidth=27mm}
+
+\newcommand{\alin}{\hskip 6mm}
+\newcommand{\saut}{\vskip 2mm}
+
+\newcommand{\cvitem}[1]{%
+\raggedright{
+\vskip 1mm
+\makebox[\textwidth]{\rule{11mm}{0.4pt} \hskip 2mm {\Large\bf\sc #1} \hskip 2mm \leaders \hrule \hfill}
+}
+}
+
+
+\begin{document}
+\thispagestyle{empty}
+\raggedright{%
+\begin{minipage}{8cm}%
+{\LARGE \bf Clément GEIGER}%
+\vskip 2mm
+176 rue Philippe de Commynes\\%
+45~160 Olivet\\ %
+France\\ %
+{\verb clement.geiger@gmail.com }\\
+\textbf{+33~(0)6~29~82~60~55}
+\end{minipage}}\hfill
+\begin{minipage}{8cm}
+\begin{flushright}
+21 ans\\
+Nationalité française\\
+\textbf{Mobilité internationale}
+\end{flushright}
+\end{minipage}
+
+\vskip 5mm
+{\large\textit{Objet}: Recherche d'un projet de fin d'étude validant mon
+diplôme d'ingénieur informatique à \textbf{INSA de Lyon}
+
+\begin{cv}{}% Élève ingénieur en informatique }
+\vskip 4mm
+\cvitem{Formation}
+    \begin{cvlist}{}
+        \item[2012]             Échange Erasmus à KTH (Stockholm, Suède)
+        \item[2009 - 2012] 	Étudiant à l'INSA de Lyon, département informatique
+        \item[2007 - 2009] 	1\up{er} cycle à l'INSA de Lyon : formation scientifique générale : mathématiques, physique, chimie
+        \item[2007]		Baccalauréat scientifique, mention Très Bien
+    \end{cvlist}
+    \saut
+
+\cvitem{Expériences professionnelles}
+    \begin{cvlist}{}
+        \item[2011]     Stage d'été à \textbf{Schlumberger} (Abingdon,
+        Royaume-Uni)
+        \item[(4 mois)] \alin Experiments on multiple constraints in multi-segmented wells
+        \item           \alin \textit{Technologies}: MS Visual Studio, C++, Perforce, linear algebra
+    \saut
+        \item[2010]     Stage d'été à \textbf{Philips Applied Technologies}
+        (Eindhoven, Pays-Bas)
+        \item[(3 mois)] \alin Conception and integration of two extension for an audio demonstrator software
+        \item           \alin \textit{Technologies}: MS Visual Studio, C++, multithread programming
+    \saut
+	\item[2009]	Stage d'été à \textbf{Thales Air Defence}
+        (Fleury-les-Aubrais, France)
+	\item[(1 mois)]  \alin Design and construction of two graphical
+	configuration generators for existing tools
+    \end{cvlist}
+    \saut
+
+\cvitem{Compétences}
+    \begin{cvlist}{}
+	\item[Programmation]	Analyse : UML, USDP
+	\item			Languages objets: \textbf{C++}, Java
+        \item                   Scripting : Python, Javascript, Lua, Shell, Matlab
+	\item			Frameworks : STL, \textbf{Qt}
+	\item			Bas niveau, embarqué : C, C sur
+        Microchip Pic, assembleur Motorola 68k, VxWorks OS, $\mu$C/OSII
+    \saut
+        \item[Connaissances]    Intelligence artificielle, traitement
+        d'images, théorie du signal, réseau
+    \saut
+	\item[Transverse skills]Travail collaboratif : \textbf{Git}, Subversion, Perforce
+	\item			Utilisation courante de \LaTeX
+	\item			Gestion de projet, assurance qualité
+    \saut
+	\item[Langues]	        \textbf{Anglais courant et technique} - score TOEIC : \textbf{980}/990
+	\item			français : langue maternelle ; allemand lu et parlé
+    \end{cvlist}
+    \saut
+
+\cvitem{Centres d'intérêt}
+\vskip 1mm
+	\textbf{Photographie}: pratique argentique et numérique
+        \textbf{Sport}: Aviron, escalade (voie et bloc)
+        \textbf{Music}: HiFi, jazz et musique électronique
+        \textbf{IT}: Linux et logiciel libre
+\end{cv}
+\vfill
+\end{document}
