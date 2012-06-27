@@ -1,6 +1,6 @@
 all:
-	pdflatex cv_anglais.tex
-	pdflatex cv_francais.tex
+	pdflatex Resume_Clement_Geiger.tex
+	pdflatex CV_Clement_Geiger.tex
 
 clean:
 	rm *.aux
