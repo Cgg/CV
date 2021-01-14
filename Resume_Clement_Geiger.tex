@@ -8,6 +8,7 @@
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{xpatch}
 \usepackage[NoDate,LabelsAligned]{currvita}
 \setlength{\cvlabelskip}{
   5pt
@@ -37,12 +38,15 @@
 }
 }
 
+\xpatchcmd{\cvlist}{#1}
+                  {\makebox[\textwidth]{\rule{11mm}{0.4pt} \hskip 2mm {\Large\bf\sc #1} \hskip 2mm \leaders \hrule \hfill}}
+                   {}{}
 
 \begin{document}
 \thispagestyle{empty}
 \raggedright{
 \begin{minipage}{8cm}
-{\LARGE \bf Clément GEIGER}
+{\LARGE \bf Clément Geiger}
 \vskip 2mm
 127A St Thomas's Road, Flat 5\\
 N4~2QE London\\
@@ -59,49 +63,51 @@ French\\
 
 \vskip 6mm
 
-\begin{cv}{Full stack software engineer}
+\begin{cv}{Front-end software engineer}
 
 \vskip 3mm
 
-\cvitem{Work experience}
-    \begin{cvlist}{}
+\begin{cvlist}{Work experience}
     \item[2018 - present] Senior Software engineer at \textbf{Bloomberg LP}
-      (London, UK), optimizing developer experience for a key data-processing library used across the company.
+      (London, UK), providing technical leadership to optimize the developer
+      experience for a key data-processing library used across the company.
 
       \begin{itemize}
       \item Conception of developer tools, written in TypeScript on a Chromium-based platform.
-      \item Design and promotion of TypeScript APIs and their documentation
+      \item Design and promotion of TypeScript APIs and their documentation.
       \item Close collaboration with other teams to implement a seamless developer experience across all environments where the library is used.
+      \item Mentoring and onboarding of new team members (growing from 2 to 5 members)
       \end{itemize}
 
     \item[2015 - 2018] Software engineer at \textbf{Bloomberg LP} (London, UK),
-      developing the Instant Bloomberg application for users of the Bloomberg
+      developing the Instant Bloomberg chat application for users of the Bloomberg
       Terminal.
 
       \begin{itemize}
       \item Front-end development in JavaScript on a Chromium-based platform.
 
       \item Practice and promotion of good software development principles; focus on
-      automated testings, continuous integration to deliver a stable product.
+      automated testing, continuous integration to deliver a stable product.
 
       \item Close relationship with business and sales teams to maximize effectiveness and impact.
       \end{itemize}
 
     \item[2012 - 2015] Software engineer at \textbf{Aldebaran Robotics}
-      (Paris, France), working on robotic IDE and developer tools.
+      (Paris, France), working on IDE and developer tools for robotic platforms.
 
       \begin{itemize}
+      \item Front-end development in C++/Qt on all major desktop environments (Windows, MacOS, Linux)
       \item Strong focus on product usability, continuously taking on user
       feedback and delivering improvements.
 
       \item Attention to software quality by taking testability into account during
       design, pushing for and maintaining high standards of coverage throughout
-      the software's life.
+      the software's lifetime.
       \end{itemize}
 
-    \item[2010-2012] Software engineering intern at Philips Applied
-      Technologies (Eindhoven, Netherlands), Schlumberger (Abingdon, UK) and
-      Gostai (Paris, France).
+    \item[2010-2012] Software engineering intern at \textbf{Philips Applied
+      Technologies} (Eindhoven, Netherlands), \textbf{Schlumberger} (Abingdon, UK) and
+      \textbf{Gostai} (Paris, France).
 
     %\item[2012 (6 months)] Software engineer intern at \textbf{Gostai} (Paris, France)\\
      %Design and implementation of developer tools for the remote presence robot \textbf{Jazz}.
@@ -112,38 +118,39 @@ French\\
     %\item[2010 (3 months)] Software engineer intern at \textbf{Philips Applied Technologies} (Eindhoven, Netherlands)\\
      %Design and implementation of looping and seeking features on an audio player.
 
-    \end{cvlist}
+\end{cvlist}
 
 
-\cvitem{Education and qualifications}
-    \begin{cvlist}{}
+\begin{cvlist}{Education and qualifications}
     \item[2011] Erasmus student exchange at \textbf{KTH} (Stockholm, Sweden)\\
-    Machine learning, artificial intelligence, imaging technologies, network
-      architecture
+    Machine learning, artificial intelligence, computational photography,
+      network architecture
 
-    \item[2007 - 2012] Master of Engineering at \textbf{INSA de Lyon}, top-tier engineering
-      school\\
-    Strong scientific background and specialization in computer sciences
+    \item[2007 - 2012] Master of Engineering at \textbf{INSA de Lyon}, top-tier
+    engineering school\\
+    Strong scientific background and specialization in computer science
 
-    \item[2007] "Baccalauréat scientifique" with honours
-    \end{cvlist}
+    \item[2007] ``Baccalauréat scientifique'' with honours
+\end{cvlist}
 
 
-\cvitem{Skills}
-    \begin{cvlist}{}
+\begin{cvlist}{Skills}
     \item[Programming] JavaScript, TypeScript, C++
-    \item[Engineering] VCS, continuous integration and delivery, TDD
+    \item[Frameworks \& API] React, Reduce, Qt, CytoscapeJS, NodeJS, webpack, WebAudio (beginner)
+    \item[Engineering] VCS, CI/CD, TDD
     \item[Languages] English fluent \& IT Technical\\
-    French native speaker
-    \end{cvlist}
+      French native speaker\\
+      German beginner
+\end{cvlist}
 
 
 \cvitem{Interests}
-  \vskip 1mm
-  \textbf{Cycling}: from everyday movement to big tours \bigcdot \textbf{Bike polo}: exactly what it sounds like \bigcdot
-  \textbf{Baking}: bread, pizzas and more \bigcdot
-  \textbf{Sewing}: design and fabrication of clothing items \bigcdot
-  \textbf{Lockpicking} enthusiast and beginner
+\vskip -1.5mm
+  \textbf{Cycling}: from everyday movement to big tours
+  \bigcdot \textbf{Bike polo}: exactly what it sounds like
+  \bigcdot \textbf{Baking}: bread, pizzas and more
+  \bigcdot \textbf{Sewing}: design and fabrication of clothing items
+
 \end{cv}
 \vfill
 \end{document}
