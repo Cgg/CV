@@ -7,6 +7,7 @@
 \renewcommand*\familydefault{\sfdefault}  %% Only if the base font of the document is to be sans serif
 \usepackage{geometry}
 \usepackage{hyperref}
+\usepackage{graphicx}
 \usepackage[NoDate,LabelsAligned]{currvita}
 \setlength{\cvlabelskip}{
   5pt
@@ -23,9 +24,15 @@
 \newcommand{\alin}{\hskip 6mm}
 \newcommand{\saut}{\vskip 2mm}
 
+% bigger than \cdot but smaller than \bullet
+\makeatletter
+\newcommand*\bigcdot{$\mathpalette\bigcdot@{.5}$~}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
 \newcommand{\cvitem}[1]{
 \raggedright{
-\vskip 1mm
+\vskip 3mm
 \makebox[\textwidth]{\rule{11mm}{0.4pt} \hskip 2mm {\Large\bf\sc #1} \hskip 2mm \leaders \hrule \hfill}
 }
 }
@@ -37,94 +44,106 @@
 \begin{minipage}{8cm}
 {\LARGE \bf Clément GEIGER}
 \vskip 2mm
-274 boulevard Raspail\\
-75~014 Paris\\
-France\\
+127A St Thomas's Road, Flat 5\\
+N4~2QE London\\
+United Kingdom\\
 {\verb clement.geiger@gmail.com }\\
-\textbf{+33~(0)~629~826~055}
+\textbf{+44~(0)~7~928~533~859}
 \end{minipage}}\hfill
 \begin{minipage}{8cm}
 \begin{flushright}
-25 years old\\
+30 years old\\
 French\\
 \end{flushright}
 \end{minipage}
 
-\vskip 5mm
+\vskip 6mm
 
-\begin{cv}{Desktop software engineer passionate about robotics}
+\begin{cv}{Full stack software engineer}
 
 \vskip 3mm
 
 \cvitem{Work experience}
     \begin{cvlist}{}
-    \item[2012 - present] Desktop software engineer at \textbf{Aldebaran} (Paris, France)
-    \item \alin Maintenance and extension
-      of existing softwares (Choregraphe \& Monitor). Creation of debugging and
-      monitoring toolchain to answer the needs introduced by the \textbf{Pepper
-      project} and changes in the underlying \textbf{NAOqi} robot framework. Strong
-      focus on \textbf{product usability}.
-    \saut
-    \item[2012] Software engineer intern at \textbf{Gostai} (Paris, France)
-    \item[(6 months)] \alin Work on the remote presence robot \textbf{Jazz} : design and
-      implementation of a configuration GUI embedded on the robot. The GUI was
-      written in \textbf{Urbiscript}, using Qt bindings.
-    \saut
-    \item[2011] Software engineer intern at \textbf{Schlumberger} (Abingdon, UK)
-    \item[(4 months)] \alin Implementation of a \textbf{multiple constraints
-      solver} for \textbf{reservoir simulation} in ECLIPSE, Schlumberger's
-      reservoir simulator.
-    \saut
-    \item[2010] Software engineer intern at \textbf{Philips Applied Technologies} (Eindhoven, Netherlands)
-    \item[(3 months)] \alin Extensions on an \textbf{audio demonstrator
-      software}: looping and seeking through audio files. Work was done
-      bottom-up, from the audio pipeline framework to the GUI.
-    \saut
+    \item[2018 - present] Senior Software engineer at \textbf{Bloomberg LP}
+      (London, UK), optimizing developer experience for a key data-processing library used across the company.
+
+      \begin{itemize}
+      \item Conception of developer tools, written in TypeScript on a Chromium-based platform.
+      \item Design and promotion of TypeScript APIs and their documentation
+      \item Close collaboration with other teams to implement a seamless developer experience across all environments where the library is used.
+      \end{itemize}
+
+    \item[2015 - 2018] Software engineer at \textbf{Bloomberg LP} (London, UK),
+      developing the Instant Bloomberg application for users of the Bloomberg
+      Terminal.
+
+      \begin{itemize}
+      \item Front-end development in JavaScript on a Chromium-based platform.
+
+      \item Practice and promotion of good software development principles; focus on
+      automated testings, continuous integration to deliver a stable product.
+
+      \item Close relationship with business and sales teams to maximize effectiveness and impact.
+      \end{itemize}
+
+    \item[2012 - 2015] Software engineer at \textbf{Aldebaran Robotics}
+      (Paris, France), working on robotic IDE and developer tools.
+
+      \begin{itemize}
+      \item Strong focus on product usability, continuously taking on user
+      feedback and delivering improvements.
+
+      \item Attention to software quality by taking testability into account during
+      design, pushing for and maintaining high standards of coverage throughout
+      the software's life.
+      \end{itemize}
+
+    \item[2010-2012] Software engineering intern at Philips Applied
+      Technologies (Eindhoven, Netherlands), Schlumberger (Abingdon, UK) and
+      Gostai (Paris, France).
+
+    %\item[2012 (6 months)] Software engineer intern at \textbf{Gostai} (Paris, France)\\
+     %Design and implementation of developer tools for the remote presence robot \textbf{Jazz}.
+
+    %\item[2011 (4 months)] Software engineer intern at \textbf{Schlumberger} (Abingdon, UK)\\
+     %Implementation of a new simulation algorithm for the ECLIPSE oil well simulator.
+
+    %\item[2010 (3 months)] Software engineer intern at \textbf{Philips Applied Technologies} (Eindhoven, Netherlands)\\
+     %Design and implementation of looping and seeking features on an audio player.
+
     \end{cvlist}
 
-    \saut
 
 \cvitem{Education and qualifications}
     \begin{cvlist}{}
-    \item[2011] Erasmus student exchange at \textbf{KTH}
-      (Stockholm, Sweden)
-    \item \alin Machine learning, artificial intelligence, imaging technologies, network
+    \item[2011] Erasmus student exchange at \textbf{KTH} (Stockholm, Sweden)\\
+    Machine learning, artificial intelligence, imaging technologies, network
       architecture
-    \saut
+
     \item[2007 - 2012] Master of Engineering at \textbf{INSA de Lyon}, top-tier engineering
-      school
-    \item \alin Strong scientific background and specialization in computer
-      sciences
-    \saut
+      school\\
+    Strong scientific background and specialization in computer sciences
+
     \item[2007] "Baccalauréat scientifique" with honours
     \end{cvlist}
 
-    \saut
 
-\cvitem{Additional skills}
+\cvitem{Skills}
     \begin{cvlist}{}
-    \item[Programming] Languages : \textbf{C++}, Javascript, Python, Lua,
-    Matlab, Shell, Java
-    \item	Low-level and embedded : C on Microchip Pic, Motorola 68k
-      assembler, VxWorks OS, $\mu$C/OSII
-    \item Frameworks: \textbf{Qt}, PyQt, Boost, GoogleTest
-    \item Skills: Design patterns, machine learning, AI, multithread
-      programming, test driven development, agile methodologies
-    \item[Transverse skills] \textbf{GUI usability}, IT project management \& Quality Assurance
-    \saut
-	\item[Languages] \textbf{English fluent \& IT Technical} - TOEIC score: \textbf{980}/990
-	\item	French native speaker; German spoken and written - equivalent to european level B2
-
+    \item[Programming] JavaScript, TypeScript, C++
+    \item[Engineering] VCS, continuous integration and delivery, TDD
+    \item[Languages] English fluent \& IT Technical\\
+    French native speaker
     \end{cvlist}
-    \saut
+
 
 \cvitem{Interests}
-\vskip 1mm
-  \textbf{Sports}: Cycling passionate, fixed gear \textit{aficionado}
-  \textbf{Music}: jazz \& electronic music listener
-	\textbf{Photography}: regular analog photographer
-  \textbf{Computer sciences}: interest in Linux and free softwares (Mozilla
-  contributor), \href{http://cgg.github.io}{weekend tinkerer}
+  \vskip 1mm
+  \textbf{Cycling}: from everyday movement to big tours \bigcdot \textbf{Bike polo}: exactly what it sounds like \bigcdot
+  \textbf{Baking}: bread, pizzas and more \bigcdot
+  \textbf{Sewing}: design and fabrication of clothing items \bigcdot
+  \textbf{Lockpicking} enthusiast and beginner
 \end{cv}
 \vfill
 \end{document}
